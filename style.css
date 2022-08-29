@@ -95,3 +95,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#textaret {
+  display: block;
+  height: 2.5em;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 3rem;
+  font-family: inherit;
+  color: inherit;
+  background-color: #f9f9f9;
+  padding: 1em;
+  border-radius: 8px;
+  transition: all 0.25s;
+}
