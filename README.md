@@ -4,6 +4,8 @@ Emoji 表情组件
 
 ### DEMO
 
+![preview](https://github.com/InvisibleFuture/emoji/blob/main/public/demo.png?raw=true)
+
 [DEMO](https://emoji.satori.love)
 
 
