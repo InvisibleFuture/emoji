@@ -10,11 +10,11 @@ Emoji 表情组件
 ### Install
 
 ```bash
-npm install @InvisibleFuture/emoji --save
+npm install satori-emoji --save
 ```
 
 ```javascript
-import Emoji from '@InvisibleFuture/emoji'
+import Emoji from 'satori-emoji'
 
 const emoji = new Emoji({
   input: document.querySelector('#input') ,        // 绑定的输入框元素(非必选)

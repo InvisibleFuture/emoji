@@ -1,7 +1,6 @@
 {
-  "name": "emoji",
-  "private": true,
-  "version": "0.0.0",
+  "name": "satori-emoji",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,5 +9,21 @@
   },
   "devDependencies": {
     "vite": "^3.0.7"
-  }
+  },
+  "description": "Emoji 表情组件",
+  "main": "emoji.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InvisibleFuture/emoji.git"
+  },
+  "keywords": [
+    "emoji",
+    "input"
+  ],
+  "author": "satori.love",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InvisibleFuture/emoji/issues"
+  },
+  "homepage": "https://github.com/InvisibleFuture/emoji#readme"
 }
