@@ -1,12 +1,17 @@
 # emoji
 Emoji 表情组件
 
+- [x] 流畅的动画效果
+- [x] 精确插入光标位置
+- [x] 使用 Esc 快捷键关闭弹出
+- [x] 提供回调函数以便于拓展操作
+- [x] 调用时才初始化以兼容服务端渲染项目
 
 ### DEMO
 
 ![preview](https://github.com/InvisibleFuture/emoji/blob/main/public/demo.png?raw=true)
 
-[DEMO](https://emoji.satori.love)
+[Click to open demo](https://emoji.satori.love)
 
 
 ### Install
