@@ -10,6 +10,10 @@ document.querySelector('#app').innerHTML = `
     <p class="read-the-docs">
       Click the button to test inserting emoji
     </p>
+    <div>
+      <a href="https://github.com/InvisibleFuture/emoji" target="_blank">github</a>
+      <a href="https://www.npmjs.com/package/satori-emoji" target="_blank">npm</a>
+    <div>
   </div>
 `
 
