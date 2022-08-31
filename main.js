@@ -13,6 +13,7 @@ document.querySelector('#app').innerHTML = `
     <div>
       <a href="https://github.com/InvisibleFuture/emoji" target="_blank">github</a>
       <a href="https://www.npmjs.com/package/satori-emoji" target="_blank">npm</a>
+      <a href="https://satori.love" target="_blank">satori</a>
     <div>
   </div>
 `

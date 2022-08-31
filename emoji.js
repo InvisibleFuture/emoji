@@ -18,7 +18,6 @@ export default class Emoji {
     this.button = button
     this.input = input
 
-    console.log(this.button)
     // 绑定按钮事件
     if (button) this.button.onclick = () => this.show()
 
@@ -52,7 +51,7 @@ export default class Emoji {
 
     // 表情列表
     this.ul = document.createElement("ul")
-    this.ul.classList.add('kaomojilist')
+    this.ul.classList.add('emojilist')
 
     // 表情单项
     this.list.forEach(item => {
@@ -83,16 +82,17 @@ export default class Emoji {
     document.body.appendChild(this.element)
 
     // 创建CSS样式(滚动条)
-    if (!document.querySelector('#kaomojibuttn')) {
+    if (!document.querySelector('#emoji-style')) {
       var style = document.createElement("style")
       style.type = "text/css"
+      style.id = "emoji-style"
       style.appendChild(document.createTextNode(`
-          ul.kaomojilist::-webkit-scrollbar { width : 10px; height: 1px; }
-          ul.kaomojilist::-webkit-scrollbar-thumb { border-radius:10px; background-color: skyblue; background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent ); }
-          ul.kaomojilist::-webkit-scrollbar-track { box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2); background:#ededed; border-radius:10px; }
-          ul.kaomojilist::-webkit-scrollbar-thumb:hover { background-color: #ccc; }
-          ul.kaomojilist { display:flex; flex-wrap:wrap; justify-content:center; list-style:none; margin:0; padding:0; overflow-y:scroll; }
-          ul.kaomojilist > li {
+          ul.emojilist::-webkit-scrollbar { width : 10px; height: 1px; }
+          ul.emojilist::-webkit-scrollbar-thumb { border-radius:10px; background-color: skyblue; background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent ); }
+          ul.emojilist::-webkit-scrollbar-track { box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2); background:#ededed; border-radius:10px; }
+          ul.emojilist::-webkit-scrollbar-thumb:hover { background-color: #ccc; }
+          ul.emojilist { display:flex; flex-wrap:wrap; justify-content:center; list-style:none; margin:0; padding:0; overflow-y:scroll; }
+          ul.emojilist > li {
             display:flex;
             justify-content:center;
             items-align:center;
@@ -105,7 +105,7 @@ export default class Emoji {
             transition: all .25s;
             cursor:pointer;
           }
-          ul.kaomojilist.ok > li:hover {
+          ul.emojilist.ok > li:hover {
             background-color: rgba(0,0,0,.05);
             font-size: 36px;
           }
@@ -133,7 +133,11 @@ export default class Emoji {
   // 隐藏组件(方法) (是否将聚焦返回给 input 的原本位置?)
   hide() {
     this.ul.classList.remove('ok')
-    setTimeout(() => { this.element.style.display = "none" }, 450)
+    setTimeout(() => {
+      //this.element.style.display = "none"
+      this.element.parentNode.removeChild(this.element)
+      this.element = null
+    }, 450)
     this.element.style.background = "rgba(0,0,0,0)"
     this.div.style.bottom = "-90%"
   }
